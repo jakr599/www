@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Gamba</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Lootboxes.js"></script>
+    <script src="Database.js"></script>
+    <script src="Gamba.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="index.html">Gamba</a></li>
+        <li onclick="displayAnimals()"><a href="#mycollection">My Collection</a></li>
+        <li onclick="displayLootboxes()"><a class="active" href="#lootboxes">Lootboxes</a></li>
+        <li onclick="displayAbout()"><a href="#about">About</a></li>
+      </ul>
+
+      <div id="mycollection">
+        <div id="mon-list"></div>
+      </div>
+
+      <div id="lootboxes">
+        <div id="box1">
+            <img src="img/lootboximg.webp" alt="lootbox img" width="200px" height="200px" onclick="buyLootbox()">
+            <br>
+            Cost: 200 coins
+        </div>
+      </div>
+
+      <div id="about">
+        This website has been created by Jakub Krákora of EA Sports' KITTV division, copyright 2025
+      </div>
+
+</body>
+</html>

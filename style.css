@@ -1,0 +1,67 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ff0000;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #ffffff;
+  }
+
+  #mycollection {
+    display: none;
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(178, 178, 178, 0.5);
+    z-index: 9999;
+  }
+
+  #mon-list {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 5px;
+    border: 1px solid black;
+  }
+
+  #lootboxes {
+    display: none;
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(254, 133, 133, 0.5);
+    z-index: 9999;
+    margin: auto;
+    padding: 20px;
+  }
+
+  #about {
+    display: none;
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(248, 254, 133, 0.5);
+    z-index: 9999;
+    margin: auto;
+    padding: 20px;
+  }
