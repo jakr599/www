@@ -1,7 +1,16 @@
 const DB = new Database();
 const LB = new LootBoxes(DB);
+const gamba = new Gamba(DB);
 
-DB.getBalance();
+DB.getBalance()
+    .then(bal => {
+        document.getElementById('balance-span').innerHTML = "Balance: " + bal;
+    })
+    .catch(error => {
+        console.log("Error getting balance:", error);
+    });
+
+//DB.getBalance();
 
 /*function readyAnimal(){
     let inputName = document.getElementById("mon-name");
@@ -61,4 +70,8 @@ function displayAbout(){
 
 function buyLootbox(){
     LB.drawLootbox();
+}
+
+function playGame(){
+    gamba.spinWheel();
 }

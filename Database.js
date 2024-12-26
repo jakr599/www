@@ -184,6 +184,9 @@ class Database {
         } catch (error) {
             console.log("Error updating balance:", error);
         }
+
+        const spanBal = document.getElementById('balance-span');
+        spanBal.innerHTML = "Balance: " + await this.getBalance();
     }
 
 
