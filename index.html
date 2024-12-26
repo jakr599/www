@@ -18,20 +18,22 @@
         <li onclick="displayAbout()"><a href="#about">About</a></li>
       </ul>
 
+      <span id="balance-span" style="font-size: 20px;">Balance: </span>
+
       <div id="gamba">
-        <span id="balance-span">Balance: </span>
         <div id="game-container">
           <div id="1">
             <img src="img/xSign.png" style="width: 200px; height: 200px;">
           </div>
           <div id="2">
-            <img src="img/xSign.png" style="width: 200px; height: 200px;">
+            <img src="img/ySign.png" style="width: 200px; height: 200px;">
           </div>
           <div id="3">
-            <img src="img/xSign.png" style="width: 200px; height: 200px;">
+            <img src="img/zSign.png" style="width: 200px; height: 200px;">
           </div>
         </div>
         <button id="spinButton" onclick="playGame()">Spin!</button>
+        <input type="number" id="betPicker" placeholder="place bet value, default 25" min="1">
       </div>
 
       <div id="mycollection">
@@ -39,15 +41,33 @@
       </div>
 
       <div id="lootboxes">
-        <div id="box1">
-            <img src="img/lootboximg.webp" alt="lootbox img" width="200px" height="200px" onclick="buyLootbox()">
-            <br>
-            Cost: 50 coins
+        <div id="lootbox-list">
+          <div>
+            <img src="img/lootboximg.webp" alt="lootbox img" width="200px" height="200px" onclick="buyLootbox(100)">
+            <p>Contains 1 card
+            <p>Cost: 100 coins
+          </div>
+          <div>
+            <img src="img/lootboximg.webp" alt="lootbox img" width="200px" height="200px" onclick="buyLootbox(185)">
+            <p>Contains 2 cards
+            <p>Cost: 185 coins
+          </div>
+          <div>
+            <img src="img/lootboximg.webp" alt="lootbox img" width="200px" height="200px" onclick="buyLootbox(285)">
+            <p>Contains 3 cards
+            <p>Cost: 285 coins
+          </div>
+          <div>
+            <img src="img/lootboximg.webp" alt="lootbox img" width="200px" height="200px" onclick="buyLootbox(375)">
+            <p>Contains 4 cards
+            <p>Cost: 375 coins
+          </div>
         </div>
       </div>
 
       <div id="about">
-        This website has been created by Jakub Krákora of EA Sports' KITTV division, copyright 2025
+        <p>This website has been created by Jakub Krákora of EA Sports' KITTV division, copyright 2025
+        <p>You can't see your collection completion by design. BUY THOSE LOOTBOXES.
       </div>
 
 </body>

@@ -68,10 +68,17 @@ function displayAbout(){
     }
 }
 
-function buyLootbox(){
-    LB.drawLootbox();
+function buyLootbox(price){
+    LB.drawLootbox(price);
 }
 
 function playGame(){
-    gamba.spinWheel();
+    //let bet = 25;
+    let bet = parseInt(document.getElementById("betPicker").value);
+    console.log(bet);
+    if (isNaN(bet)) {
+        bet = 25;
+        console.log(bet);
+    }
+    gamba.spinWheel(bet);
 }

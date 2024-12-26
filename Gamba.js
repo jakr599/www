@@ -6,13 +6,13 @@ class Gamba {
 
     #icons = ["x", "y", "z"];
 
-    async spinWheel(){
-        let bet = 25;
+    async spinWheel(bet){
+        //let bet = 25;
         let bal = await this.#database.getBalance();
-        console.log(bal);
+        //console.log(bal);
         
         if (bet <= bal) {
-            await this.#database.editBalance(25);
+            await this.#database.editBalance(bet);
             const div1 = document.getElementById("1");
             const div2 = document.getElementById("2");
             const div3 = document.getElementById("3");
@@ -48,7 +48,7 @@ class Gamba {
             div3.innerHTML = s3;*/
 
             if (s1 === s2 && s2 === s3) {
-                await this.#database.editBalance(-250);
+                await this.#database.editBalance(-(bet*10));
                 //console.log(this.#database.getBalance());
             }
         }

@@ -107,8 +107,18 @@ class Database {
         tbody.innerHTML = "";
         for (let r of data){
             let div = document.createElement("div");
-            div.innerHTML = r.id + " : " + r.mon_name;
+            const img = document.createElement('img');
+            const par = document.createElement('p');
 
+            img.src = `img/${r.mon_name}.png`;
+            img.style.width = "200px";
+            img.style.height = "300px";
+
+            par.innerHTML = r.mon_name;
+            div.style.textAlign = "center";
+
+            div.appendChild(img);
+            div.appendChild(par);
             tbody.appendChild(div);
         }
     }

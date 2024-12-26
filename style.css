@@ -25,11 +25,11 @@ ul {
 
   #mycollection {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 10;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     background-color: rgba(178, 178, 178, 0.9);
     z-index: 9999;
     font-size: 20px;
@@ -54,6 +54,20 @@ ul {
     margin: auto;
     font-size: 20px;
     padding: 20px;
+  }
+
+  #lootbox-list {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 5px;
+  }
+
+  #lootbox-list > div {
+    border: 1px solid black;
+    padding: 5px;
+    height: 25vh;
+    height: fit-content;
+    text-align: center;
   }
 
   #about {
@@ -84,6 +98,10 @@ ul {
   }
 
   #spinButton{
+    font-size: 28px;
+  }
+
+  #betPicker{
     font-size: 28px;
   }
 
