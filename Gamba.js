@@ -54,7 +54,10 @@ class Gamba {
         }
         else {
             alert("Not Enough Coins To Spin the Wheel");
-            await this.#database.editBalance(-200);
+            if (bet <= 25){
+                await this.#database.editBalance(-200);
+                alert("Awarded Comeback Coins");
+            }
         }
     }
 }
